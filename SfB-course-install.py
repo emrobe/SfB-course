@@ -5,7 +5,7 @@ import getpass, os, argparse, pkgutil, sys, subprocess
 def apt_specific_modules(args):
 	import apt
 
-	packages = ['gnuplot','python3-matplotlib','libtool','cython','python-setuptools','build-essential','libgsl-dev','r-base-core','openjfx','python-matplotlib','autoconf', 'automake', 'libeigen3-dev', 'libboost-all-dev', 'zlib1g-dev','git','bowtie2', 'ncbi-blast+', 'samtools', 'python-htseq', 'default-jre', 'python-biopython']
+	packages = ['curl','gnuplot','python3-matplotlib','libtool','cython','python-setuptools','build-essential','libgsl-dev','r-base-core','openjfx','python-matplotlib','autoconf', 'automake', 'libeigen3-dev', 'libboost-all-dev', 'zlib1g-dev','git','bowtie2', 'ncbi-blast+', 'samtools', 'python-htseq', 'default-jre', 'python-biopython']
 	packages = sorted(packages)
 	
 	cache = apt.cache.Cache()
