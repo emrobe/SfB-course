@@ -18,6 +18,7 @@ echo 'export PATH="$HOME/anaconda2/bin:$PATH"' >> $HOME/.bashrc
 source $HOME/.bashrc
 
 # Setup conda envs, channels and install packages needed in default env (needed by SfB-course-install.py)
+conda config --add channels r
 conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
@@ -36,6 +37,18 @@ conda create -y -n Abricate
 conda install -y --name Abricate abricate
 conda create -y -n Unicycler python=3
 conda install -y --name Unicycler unicycler
+conda create -y --n Mulitqc
+conda install -y --name Multiqc multiqc
+conda create -y -n Snippy
+conda install -y --name Snippy snippy
+conda create -y -n Roary
+conda install -y --name Roary roary
+
+conda create -y -name Scoary
+conda activate Scoary
+pip install scoary
+conda deactivate
+
 
 # Run course install script, needs sudo and libapt-pkg installed
 sudo apt-get install python-apt
