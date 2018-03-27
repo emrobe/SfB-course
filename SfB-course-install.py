@@ -5,7 +5,7 @@ import getpass, os, argparse, pkgutil, sys, subprocess
 def apt_specific_modules(args):
 	import apt
 
-	packages = ['ghostscript','libfile-slurp-perl','libjson-perl','liblist-moreutils-perl','libmoo-perl','curl','gnuplot','python3-matplotlib','libtool','cython','python-setuptools','build-essential','libgsl-dev','r-base-core','openjfx','python-matplotlib','autoconf', 'automake', 'libeigen3-dev', 'libboost-all-dev', 'zlib1g-dev','git','bowtie2', 'ncbi-blast+', 'samtools', 'python-htseq', 'default-jre', 'python-biopython', 'abacas', 'libdatetime-perl', 'libxml-simple-perl', 'libdigest-md5-perl', 'bioperl', 'cmake', 'qtbase5-dev', 'libqt5svg5-dev', 'qt5-default', 'tabix', 'python-pip']
+	packages = ['tcsh','treeviewx','ghostscript','libfile-slurp-perl','libjson-perl','liblist-moreutils-perl','libmoo-perl','curl','gnuplot','python3-matplotlib','libtool','cython','python-setuptools','build-essential','libgsl-dev','r-base-core','openjfx','python-matplotlib','autoconf', 'automake', 'libeigen3-dev', 'libboost-all-dev', 'zlib1g-dev','git','bowtie2', 'ncbi-blast+', 'samtools', 'python-htseq', 'default-jre', 'python-biopython', 'abacas', 'libdatetime-perl', 'libxml-simple-perl', 'libdigest-md5-perl', 'bioperl', 'cmake', 'qtbase5-dev', 'libqt5svg5-dev', 'qt5-default', 'tabix', 'python-pip']
 	packages = sorted(packages)
 	
 	cache = apt.cache.Cache()
