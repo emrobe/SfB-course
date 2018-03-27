@@ -43,16 +43,18 @@ conda create -y -n Snippy
 conda install -y --name Snippy snippy
 conda create -y -n Roary
 conda install -y --name Roary roary
+conda create -y -n Isescan python=3
+conda install -y --name Isescan numpy scipy fastcluster fraggenescan hmmer blast biopython
 
 conda create -y -name Scoary
-conda activate Scoary
+source activate Scoary
 pip install scoary
-conda deactivate
+source deactivate
 
 
 # Run course install script, needs sudo and libapt-pkg installed
 sudo apt-get install python-apt
-sudo python SfB-course-install.py --install
+sudo /usr/bin/python SfB-course-install.py --install
 
 # Write to .bashrc (SfB_path_additions.txt)
 DIR=`pwd`
