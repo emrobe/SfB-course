@@ -1,7 +1,7 @@
 # SfB-course
 Deployment implementation for SfB related courses (Use with Ubuntu 16.04)
 
-TLDR; Clone and run Deployment_wrapper.sh WITHOUT sudo privileges. At some point it will ask for it. Enter you password, continue. Wait. Voila'
+TLDR; Clone repository and source Deployment_wrapper.sh WITHOUT sudo privileges. At some point it will ask for it. Enter you password, continue. Wait. Voila'
 
 ## How to add software to this deployment implementation
 * Python2 - Python 2 related libraries is installed to the Anaconda2 (base) env, which acts as the deafult python2 namespace. Use pip install or conda install. Programs (ex. MultiQC) are installed to their specific environments. Simply add commands to Deployment_wrapper.sh (Under Install conda packages and bundles)
