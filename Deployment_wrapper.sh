@@ -3,7 +3,7 @@
 echo "Deploying SfB-course..."
 
 # Setup and configure anaconda2 for SfB-course
-python Setup-anaconda2.py
+python Setup-anaconda2.py --install
 
 # Setup jupyter notebook (launcher, icon, install-desktop, update-desktop-databases...etc)
 echo "Icon=$HOME/SfB-course/mmp_logo.png" >> sfb.desktop
@@ -58,7 +58,7 @@ sudo /usr/bin/python SfB-course-install.py --install
 
 # Write to .bashrc (SfB_path_additions.txt)
 DIR=`pwd`
-echo 'source $DIR/SfB_path_additions.txt' >> $HOME/.bashrc
+echo "source $DIR/SfB_path_additions.txt" >> $HOME/.bashrc
 
 # Source .bashrc to include 
 source $HOME/.bashrc
