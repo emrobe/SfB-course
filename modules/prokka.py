@@ -16,10 +16,10 @@ def commence(action):
 			FNULL = open(os.devnull, 'w')
 			print "\t\tCloning from git..."
 			subprocess.call(["git", "clone", "https://github.com/tseemann/prokka.git"], stdout=FNULL, stderr=FNULL)
-			os.chdir('prokka/bin/prokka')
+			os.chdir('prokka/bin')
 			print "\t\tCompiling..."
 			path = os.getcwd()
-			os.chdir('../../..')
+			os.chdir('../..')
 			print "\t\tWriting paths to PATH_additions.txt..."
 			with open("SfB_path_additions.txt", "a") as source:
 				source.write('export PATH='+path+':$PATH'+"\n")

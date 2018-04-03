@@ -3,7 +3,7 @@ def commence(action):
 	import subprocess, os
 	if action == 'check':
 		try:
-			if os.path.isfile('./bcftools'):
+			if os.path.isfile('./bcftools-1.3.1/bcftools'):
 				return True
 			else:
 				return False
@@ -15,9 +15,9 @@ def commence(action):
 			print "\tInstalling BCFtools..."
 			FNULL = open(os.devnull, 'w')
 			print "\t\tDownloading..."
-			subprocess.call(["wget", "https://github.com/samtools/bcftools/releases/download/1.3.1/bcftools-1.3.1.tar.bz2 -O bcftools.tar.bz2"], stdout=FNULL, stderr=FNULL)
+			subprocess.call(["wget", "https://github.com/samtools/bcftools/releases/download/1.3.1/bcftools-1.3.1.tar.bz2", "-O", "bcftools.tar.bz2"], stdout=FNULL, stderr=FNULL)
 			print "\t\tUnziping..."
-			subprocess.call(["tar", "xjvf", "bcftools.tar.bz2"], stdout=FNULL, stderr=FNULL)
+			subprocess.call(["tar", "-xjvf", "bcftools.tar.bz2"], stdout=FNULL, stderr=FNULL)
 			subprocess.call(["rm", "bcftools.tar.bz2"], stdout=FNULL, stderr=FNULL, close_fds=True)
 			print "\t\tCompiling..."
 			os.chdir('bcftools-1.3.1')

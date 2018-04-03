@@ -14,7 +14,7 @@ def commence(action):
 			print "\tInstalling ISEScan..."
 			FNULL = open(os.devnull, 'w')
 			print "\t\tDownloading..."
-			subprocess.call(["wget", "wget https://github.com/xiezhq/ISEScan/archive/v1.5.4.3.tar.gz"], stdout=FNULL, stderr=FNULL)
+			subprocess.call(["wget", "https://github.com/xiezhq/ISEScan/archive/v1.5.4.3.tar.gz"], stdout=FNULL, stderr=FNULL)
 			subprocess.call(["tar", "-zxvf", "v1.5.4.3.tar.gz"], stdout=FNULL, stderr=FNULL)
 			subprocess.call(["rm", "v1.5.4.3.tar.gz"], stdout=FNULL, stderr=FNULL)
 			os.chdir('ISEScan-1.5.4.3')

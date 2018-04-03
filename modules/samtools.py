@@ -15,9 +15,9 @@ def commence(action):
 			print "\tInstalling Samtools..."
 			FNULL = open(os.devnull, 'w')
 			print "\t\tDownloading..."
-			subprocess.call(["wget", "https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2 -O samtools.tar.bz2"], stdout=FNULL, stderr=FNULL)
+			subprocess.call(["wget", "https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2", "-O", "samtools.tar.bz2"], stdout=FNULL, stderr=FNULL)
 			print "\t\tUnziping..."
-			subprocess.call(["tar", "xjvf", "samtools.tar.bz2"], stdout=FNULL, stderr=FNULL)
+			subprocess.call(["tar", "-xjvf", "samtools.tar.bz2"], stdout=FNULL, stderr=FNULL)
 			subprocess.call(["rm", "samtools.tar.bz2"], stdout=FNULL, stderr=FNULL, close_fds=True)
 			print "\t\tCompiling..."
 			os.chdir('samtools-1.3.1')
