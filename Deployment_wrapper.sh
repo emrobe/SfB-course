@@ -9,6 +9,7 @@ python Setup-anaconda2.py --install
 echo "Icon=$HOME/SfB-course/mmp_logo.png" >> sfb.desktop
 echo "Exec=$HOME/SfB-course/scripts/start_sfb_jupyter.sh" >> sfb.desktop
 cp sfb.desktop $HOME/.local/share/applications
+mkdir $HOME/Practicals
 
 # Write to anaconda path .bashrc (Changes default python distribution to anaconda python)
 echo "" >> $HOME/.bashrc
