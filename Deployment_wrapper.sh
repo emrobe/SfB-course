@@ -13,7 +13,7 @@ mkdir $HOME/Practicals
 
 # Write to anaconda path .bashrc (Changes default python distribution to anaconda python)
 echo "" >> $HOME/.bashrc
-echo 'export PATH="$HOME/anaconda2/bin:$PATH"' >> $HOME/.bashrc
+echo 'export PATH=$HOME/anaconda2/bin:$PATH' >> $HOME/.bashrc
 
 # Source .bashrc to set anaconda-specific python bins
 source $HOME/.bashrc
@@ -38,7 +38,7 @@ conda create -y -n Abricate
 conda install -y --name Abricate abricate
 conda create -y -n Unicycler python=3
 conda install -y --name Unicycler unicycler
-conda create -y --n Mulitqc
+conda create -y -n Mulitqc
 conda install -y --name Multiqc multiqc
 conda create -y -n Snippy
 conda install -y --name Snippy snippy
@@ -47,7 +47,7 @@ conda install -y --name Roary roary
 conda create -y -n Isescan python=3
 conda install -y --name Isescan numpy scipy fastcluster fraggenescan hmmer blast biopython
 
-conda create -y -name Scoary
+conda create -y -n Scoary
 source activate Scoary
 pip install scoary
 source deactivate
