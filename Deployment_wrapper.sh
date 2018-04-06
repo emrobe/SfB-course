@@ -38,7 +38,7 @@ conda create -y -n Abricate
 conda install -y --name Abricate abricate
 conda create -y -n Unicycler python=3
 conda install -y --name Unicycler unicycler
-conda create -y -n Mulitqc
+conda create -y -n Multiqc
 conda install -y --name Multiqc multiqc
 conda create -y -n Snippy
 conda install -y --name Snippy snippy
